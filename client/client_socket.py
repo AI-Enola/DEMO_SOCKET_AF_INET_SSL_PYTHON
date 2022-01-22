@@ -36,7 +36,7 @@ class Client_Socket:
         
         self.logger.info("[CLIENT SOCKET] - Init socket...")
         self.server_socket = socket.socket()
-        self.server_info = [str('127.0.0.1'), int(60004)] # [0] = SERVER IP  [1] = SERVER PORT - Can be changed
+        self.SERVER_INFO = [str('127.0.0.1'), int(60004)] # [0] = SERVER IP  [1] = SERVER PORT - Can be changed
 
     
     def connect_to_server(self) -> object:
@@ -51,12 +51,12 @@ class Client_Socket:
         self.logger.info("[CLIENT SOCKET] - Connecting to server...\nWrapping SSL with server socket")
         self.server_socket = ssl.wrap_socket(self.server_socket, ssl_version=ssl.PROTOCOL_TLSv1_2, ciphers=None)
         
-        try: self.server_socket.connect((self.server_info[0], self.server_info[1]))
+        try: self.server_socket.connect((self.SERVER_INFO[0], self.SERVER_INFO[1]))
         
         except socket.error:
             self.logger.error(f"[CLIENT SOCKET] - Connecting to server FAILED!\n{socket.error}")
             raise
         
-        self.logger.info(f"[CLIENT SOCKET] - Connection initiate with Server : {self.server_info[1]}")
+        self.logger.info(f"[CLIENT SOCKET] - Connection initiate with Server : {self.SERVER_INFO[1]}")
         
         return self.server_socket
