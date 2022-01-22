@@ -1,8 +1,14 @@
 # DEMO_SOCKET_AF_INET_SSL_PYTHON
 Python demo of socket family as AF_INET using TCP with SSL.
 
+Compatibility : macOS & GNU/Linux
+
+Network Topology style : Point-to-Point
+
+Encrypted : YES (SSL)
+ 
 Description : 
-This is a python demo of socket IP. The server is waiting for message from client. When the client has sended his message the server reply back.
+This is a python demo of socket IP. The server is waiting for message from client. When the client has sended his message the server reply back. (Like ECHO)
 
 This demo were rebuild based a on parent project (PYKE NPPE). This DEMO is a lite version of the parent project
 
