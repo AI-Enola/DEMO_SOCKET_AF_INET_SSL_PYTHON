@@ -1,7 +1,7 @@
 # DEMO_SOCKET_AF_INET_SSL_PYTHON
 Python demo of socket family as AF_INET using TCP with SSL.
 
-Compatibility : macOS & GNU/Linux
+Compatibility : macOS & GNU/Linux & Windows 10
 
 Network Topology style : Point-to-Point
 
